@@ -1,13 +1,24 @@
-for (let i = 1; i < arr.length; i++) {
-    let current = arr[i];
-    let j = i - 1;
+count = 0;
+space = 0;
+vowel= 0;
+arr = ["a", "e", "i", "o", "u"];
+let char = prompt("donnez votre phrase ");
 
-        while (j >= 0 && arr[j] > current) {
-             arr[j + 1] = arr[j];
-             j--;
+for (const letter of char) {
+  count++;
+
+    if (arr.includes(letter)) {
+        vowel++;
+    }
+
+         if (letter === " ") {
+            space++;
         }
-
-            arr[j + 1] = current;
+            if(letter === "."){
+                break;
+            }
 }
 
-        return arr;
+console.log(count);
+console.log(vowel);
+console.log(space);
